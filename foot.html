@@ -1,0 +1,216 @@
+<!--live2d-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Live2D</title>
+
+<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/waifu1.css"/>
+<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/flat-ui.min1.css"/>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="waifu" id="waifu">
+<div class="waifu-tips" style="opacity: 1; font-size: 14px"></div>
+<canvas id="live2d" width="300" height="300" class="live2d"></canvas>
+<div class="waifu-tool">
+<span class="fui-home"></span>
+<span class="fui-chat"></span>
+<span class="fui-eye"></span>
+<span class="fui-user"></span>
+<span class="fui-photo"></span>
+<span class="fui-info-circle"></span>
+<span class="fui-cross"></span>
+</div>
+</div>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/live2d.js"></script>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/waifu-tips1.js"></script>
+<script type="text/javascript">initModel()</script>
+</body>
+</html>
+<!--live2dend-->
+
+<!--放大图片-->
+<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/zoom.css">
+<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/transition.js"></script>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/zoom.js"></script>
+<script type='text/javascript'>$('#cnblogs_post_body img').attr('data-action', 'zoom');</script>
+<!--放大图片end-->
+
+<!--鼠标烟花特效-->
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/mouse-click.js"></script>
+<canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+<!--鼠标特效 end-->
+
+
+<!-- Music-->
+<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/zouwangblog/APlayer.min.css">
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/APlayer.min.js"></script>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/Meting.min.js"></script>
+<div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="2878443703" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
+<!-- Music end -->
+
+
+<script type="text/javascript">
+ $(document).ready(function(){  	
+var botui = new BotUI('botui-app'); // 参数是容器的id
+ 
+botui.message.bot({ // 第一条信息
+  delay: 200,
+  content: 'Hi, there👋'
+}).then(function () {
+  return botui.message.bot({ // 第二条信息
+    delay: 1000, // 等待1秒
+    content: '这里是Zou-Wang'
+  });
+
+}).then(function () {
+  return botui.message.bot({ // 第三条信息
+    delay: 1000, // 等待1秒
+    content: '一个傲娇的Java程序员'
+  });
+
+}).then(function () {
+  return botui.action.button({ // 与用户交互
+    delay: 1000,
+    action: [
+      {
+        text: ' 然后呢？ 😃',
+        value: 'sure'
+      },
+      {
+        text: '少废话啦😣',
+        value: 'skip'
+      }
+    ]
+  });
+
+
+}).then(function (res) {
+          if(res.value == 'sure') {
+            tutorial();
+          }
+          else if(res.value == 'skip') {
+            end();
+          }
+        });
+
+        var tutorial = function () {
+          botui.message.add({
+            delay: 1000,
+            content: "😘"
+          }).then(function () {
+            return botui.message.add({
+              delay: 1000,
+              content: '呐，告诉我你是谁吧'
+            });
+          }).then(function () {
+            return botui.message.add({
+              delay: 1200,
+              content: '写上你的名字（填写后按回车键）'
+            });
+          }).then(function () {
+            return botui.action.text({
+              delay: 800,
+              action: {
+                value: 'Zou-Wang',
+                placeholder: '填写你的名字'
+              }
+            });
+          }).then(function (res) {
+            return botui.message.bot({
+              delay: 500,
+              content: res.value + ' 很高兴认识你呢'
+            });
+                  
+          }).then(function () {
+            return botui.message.add({
+              delay: 1200,
+              content: '呐~我也介绍一下自己吧'
+            });
+          }).then(function (res) {
+            return botui.message.bot({
+              delay: 1400,
+              content: '目前在大连高新区做软件开发'
+            });
+            
+          }).then(function (res) {
+            return botui.message.bot({
+              delay: 1400,
+              content: '主要负责前端项目的搭建和设计，后台Java的开发工作'
+            });
+            
+          }).then(function (res) {
+            return botui.message.bot({
+              delay: 1400,
+              content: '擅长Java，SpringBoot，MySql，Vue'
+            });
+            
+        }).then(function (res) {
+            return botui.message.bot({
+              delay: 1400,
+              content: '嗯。。。喜欢看小说，喜欢古风/篮球/游泳/乒乓球'
+            });
+            
+        }).then(function () {
+          return botui.action.button({
+            delay: 1000,
+            action: [{
+              text: '首页的是谁啊',
+              value: 'erCi'
+            }]
+          });
+          }).then(function (res) {
+            return botui.message.bot({
+              delay: 1400,
+              content: '是我的女朋友啦😁'
+            });
+            
+          }).then(function (res) {
+            return botui.message.bot({
+              delay: 1400,
+              content: '很可爱的吧'
+            });
+            
+          }).then(function (res) {
+            return botui.message.bot({
+              delay: 2000,
+              content: '呐~在我博客玩耍吧(/▽＼=)'
+            });            
+           });
+   
+        };
+
+        var end = function () {
+          botui.message.add({
+            delay: 1200,
+            content: '![](https://www.cnblogs.com/images/cnblogs_com/zouwangblog/1476679/t_o_buting.jpg)'
+           
+          });
+        };
+
+}
+// 控制台输出信息
+(function(a){
+    if (!a) return;
+    var msg = "%c欢迎访问Zou-Wang的博客,望各位大佬多加指点.\n ";
+    if (window.chrome) {
+        a.log("%c ", "padding:50px;background:url('https://img2018.cnblogs.com/blog/1646268/201907/1646268-20190715094436742-266052290.jpg')no-repeat;background-size: contain;");
+        a.log(msg, "color:#0080FF");
+    } else {
+        a.log(msg.replace(/%c/g,''));
+    }
+})(top.console);
+});
+</script>
+
+
+
+<!--雪花特效 冬天再加-->
+
+<!--
+div class="Snow">
+    <canvas id="Snow"></canvas>
+</div>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/xue.js"></script>
+-->

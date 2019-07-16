@@ -1,0 +1,65 @@
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/silence-zw2.js"></script>
+<script type="text/javascript">
+    $.silence({
+        profile: {
+            enable: true,
+            avatar: 'https://img2018.cnblogs.com/blog/1646268/201907/1646268-20190701151456277-1502609418.jpg',
+            favicon: 'https://files-cdn.cnblogs.com/files/zouwangblog/title.ico',
+        },
+        catalog: {
+            enable: true,
+            move: true,
+            index: true,
+            level1: 'h2',
+            level2: 'h3',
+            level3: 'h4',
+        },
+        signature: {
+            enable: true,
+            home: 'https://www.cnblogs.com/zouwangblog/',
+            license: 'CC BY 4.0',
+            link: 'https://creativecommons.org/licenses/by/4.0'
+        },
+        reward: {
+            enable: true,
+            title: '『谢谢赞赏』',
+            wechat: 'https://www.cnblogs.com/images/cnblogs_com/zouwangblog/1477590/t_%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20190704175553.png',
+            alipay: 'https://www.cnblogs.com/images/cnblogs_com/zouwangblog/1477590/t_%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20190704174158.png'
+        },
+        github: {
+            enable: true,
+            color: '#fff',
+            fill: '#FF85B8',
+            link: 'https://github.com/Zou-Wang'
+        }
+    });
+</script>
+
+<!--纪念日-->
+<div id="showsectime"></div>
+
+<script type="text/javascript">
+function NewDate(str) { 
+str = str.split('-'); 
+var date = new Date(); 
+date.setUTCFullYear(str[0], str[1] - 1, str[2]); 
+date.setUTCHours(0, 0, 0, 0); 
+return date; 
+} 
+function showsectime() {
+var birthDay =NewDate("2017-08-23");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("showsectime").innerHTML = "张大人的第"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(showsectime, 1000);
+}showsectime();
+</script>
+<!--纪念日end-->

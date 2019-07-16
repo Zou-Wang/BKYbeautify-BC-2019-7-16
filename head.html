@@ -1,0 +1,48 @@
+<!--自己信息-->
+<div class="c-notice">
+  <div>欢迎来到Zou-Wang的博客</div>
+</div>
+<div class="c-portrait">
+ <img class="site-master-avatar" itemprop="image" src="//pic.cnblogs.com/avatar/1646268/20190628143903.png" alt="Zou-Wang"style="height:120px;padding:10px;box-sizing:border-box;z-index:2; border-radius: 50%;"">
+  <div style="font-size: 25px">Zou-Wang</div>
+  <div style="font-size: 16px">晓看天色暮看云，行也思君，坐也思君</div>
+</div>
+
+
+<!--添加导航栏-->
+<script type="text/javascript">
+<!--离开页面改变title-->
+var time;
+var normar_title=document.title;
+document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState == 'hidden') {
+         clearTimeout(time);        
+         document.title = '客官请留步ε=ε=ε=┏(゜ロ゜;)┛';
+    } else {
+        document.title = '你终于回来了(。・∀・)ノ';
+        time=setTimeout(function(){ document.title = normar_title; }, 3000);
+
+}
+});
+
+ $(document).ready(function(){
+
+    if(window.location.href==='https://www.cnblogs.com/zouwangblog/')	{
+         document.title = '欢迎来到Zou-Wang的博客';
+}
+      
+      $("#navList").append('<li><a id="blog_nav_myyoulian" class="menu" href="https://www.cnblogs.com/zouwangblog/p/11177049.html">友链</a></li><li><a id="blog_nav_myguanyu" class="menu" href="https://www.cnblogs.com/zouwangblog/p/11157339.html">关于</a></li>')  
+});
+</script>
+
+<!--添加导航栏end-->
+
+<!--顶部加载条-->
+  <link rel="stylesheet" href="https://blog-static.cnblogs.com/files/zouwangblog/nprogress.css">
+  <script src="https://blog-static.cnblogs.com/files/zouwangblog/nprogress.js"></script>
+<script>
+ $(document).ready(function(){
+NProgress.start();
+NProgress.done();
+});
+</script>
