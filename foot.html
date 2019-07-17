@@ -4,27 +4,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Live2D</title>
 
-<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/waifu1.css"/>
+<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/waifu.css">
 <link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/flat-ui.min1.css"/>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="waifu" id="waifu">
-<div class="waifu-tips" style="opacity: 1; font-size: 14px"></div>
-<canvas id="live2d" width="300" height="300" class="live2d"></canvas>
-<div class="waifu-tool">
-<span class="fui-home"></span>
-<span class="fui-chat"></span>
-<span class="fui-eye"></span>
-<span class="fui-user"></span>
-<span class="fui-photo"></span>
-<span class="fui-info-circle"></span>
-<span class="fui-cross"></span>
-</div>
-</div>
-<script src="https://blog-static.cnblogs.com/files/zouwangblog/live2d.js"></script>
-<script src="https://blog-static.cnblogs.com/files/zouwangblog/waifu-tips1.js"></script>
-<script type="text/javascript">initModel()</script>
+<div id="waifu-toggle" style="margin-left: -100px;">
+			<span>看板娘</span>
+		</div>
+<div id="waifu" style="bottom: 0px;">
+			<div id="waifu-tips" style="opacity: 1;"></div>
+			<canvas id="live2d" width="300" height="300"></canvas>
+			<div id="waifu-tool">
+				<span class="fa fa-lg fa-comment"></span>
+				<span class="fa fa-lg fa-paper-plane"></span>
+				<span class="fa fa-lg fa-user-circle"></span>
+				<span class="fa fa-lg fa-street-view"></span>
+				<span class="fa fa-lg fa-camera-retro"></span>
+				<span class="fa fa-lg fa-info-circle"></span>
+				<span class="fa fa-lg fa-times"></span>
+			</div>
+		</div>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/live2d.min.js"></script>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/waifu-tips.js"></script>
+
 </body>
 </html>
 <!--live2dend-->
@@ -37,7 +40,7 @@
 <script type='text/javascript'>$('#cnblogs_post_body img').attr('data-action', 'zoom');</script>
 <!--放大图片end-->
 
-<!--鼠标烟花特效-->
+<!--鼠标特效-->
 <script src="https://blog-static.cnblogs.com/files/zouwangblog/mouse-click.js"></script>
 <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
 <!--鼠标特效 end-->
@@ -51,8 +54,16 @@
 <!-- Music end -->
 
 
+
+<!--botui-->
+<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/zouwangblog/botui.min.css">
+<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/zouwangblog/botui-theme-default.css">
+<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/botui.min.js"></script>
+
 <script type="text/javascript">
  $(document).ready(function(){  	
+if(window.location.href==='https://www.cnblogs.com/zouwangblog/p/11157339.html')	{
 var botui = new BotUI('botui-app'); // 参数是容器的id
  
 botui.message.bot({ // 第一条信息
@@ -190,6 +201,7 @@ botui.message.bot({ // 第一条信息
         };
 
 }
+
 // 控制台输出信息
 (function(a){
     if (!a) return;
@@ -206,11 +218,9 @@ botui.message.bot({ // 第一条信息
 
 
 
-<!--雪花特效 冬天再加-->
+<!--雪花特效1&12月自动添加-->
 
-<!--
-div class="Snow">
+<div class="Snow">
     <canvas id="Snow"></canvas>
 </div>
 <script src="https://blog-static.cnblogs.com/files/zouwangblog/xue.js"></script>
--->

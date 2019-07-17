@@ -66,7 +66,7 @@ body:before {
     content: '';
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.1;
+    opacity: 0.05;
     position: fixed;
     top: 0;
     left: 0;
@@ -212,6 +212,7 @@ a:hover {
 }
 
 #sideBar {
+    width: 250px;
     border-right: 1px solid #EEF2F8;
     font-weight: 300;
     display: none;
@@ -462,11 +463,18 @@ a:hover {
 }
 
 .post .postBody h2 {
-    font-weight: 100!important;
+    font-size: 20px!important;
     color: #61687C
 }
 
-
+.post .postBody h5, .post .postBody h3 {
+    font-size: 17px!important;
+    color: #314659;
+}
+.post .postBody h4{
+    font-size: 15px!important;
+    color: #314659;
+}
 .post .postBody p {
     margin: 17px auto
 }
@@ -1615,6 +1623,14 @@ a:hover {
     margin-right: 70px
 }
 
+
+#showsectime {
+    font-size: 15px
+}
+#showsectime:before {
+    content: '💕';
+}
+
 /**修改选择背景色*/
 ::selection{background:#E5F4FE;color:#384654;}
 ::-moz-selection{background:#E5F4FE;color:#384654;}
@@ -1664,22 +1680,39 @@ div.info.note:before {
 }
 
 
-/**雪花样式*/
+
 #Snow{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 99999;
     background: rgba(125,137,95,0.1);
     pointer-events: none;
 }
 
-/*放大图片溢出隐藏设置*/
+/*溢出隐藏设置*/
 #topics, #mainContent {
     overflow: visible;
 }
 #postDesc {
     float: none;
+}
+
+/*统计*/
+#tongji{
+    display: none;
+}
+
+#waifu-toggle {
+    position: fixed;
+    writing-mode: vertical-rl;
+    bottom: 70px;
+    left: 0px;
+    background-color: #fa0;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    width: 50px;
+    cursor: pointer;
 }
