@@ -1,0 +1,33 @@
+<!--live2d-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Live2D</title>
+
+<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/waifu.css">
+<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/flat-ui.min1.css"/>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="waifu-toggle" style="margin-left: -100px;">
+			<span>¿´°åÄï</span>
+		</div>
+<div id="waifu" style="bottom: 0px;">
+			<div id="waifu-tips" style="opacity: 1;"></div>
+			<canvas id="live2d" width="300" height="300"></canvas>
+			<div id="waifu-tool">
+				<span class="fa fa-lg fa-comment"></span>
+				<span class="fa fa-lg fa-paper-plane"></span>
+				<span class="fa fa-lg fa-user-circle"></span>
+				<span class="fa fa-lg fa-street-view"></span>
+				<span class="fa fa-lg fa-camera-retro"></span>
+				<span class="fa fa-lg fa-info-circle"></span>
+				<span class="fa fa-lg fa-times"></span>
+			</div>
+		</div>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/live2d.min.js"></script>
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/waifu-tips.js"></script>
+
+</body>
+</html>
+<!--live2dend-->
