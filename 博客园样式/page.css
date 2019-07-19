@@ -1388,8 +1388,12 @@ a:hover {
     outline: 0
 }
 
-.commentform .comment_textarea:hover {
-    border-color: #F58EA8
+.commentform .comment_textarea:hover,.commentform .comment_textarea:focus {
+    border-color: #F58EA8;
+      position: relative;
+    background: url(https://img2018.cnblogs.com/blog/1646268/201907/1646268-20190719134948147-1816156553.png) right -6px top;
+    background-size: 200px;
+    background-repeat: no-repeat;
 }
 
 .commentform #commentbox_opt {
