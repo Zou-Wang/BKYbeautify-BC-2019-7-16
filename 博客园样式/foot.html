@@ -205,10 +205,10 @@ botui.message.bot({ // 第一条信息
 // 控制台输出信息
 (function(a){
     if (!a) return;
-    var msg = "%c欢迎访问Zou-Wang的博客,望各位大佬多加指点.\n ";
+    var msg = "欢迎访问Zou-Wang的博客,望各位大佬多加指点.\n ";
     if (window.chrome) {
         a.log("%c ", "padding:50px;background:url('https://img2018.cnblogs.com/blog/1646268/201907/1646268-20190715094436742-266052290.jpg')no-repeat;background-size: contain;");
-        a.log(msg, "color:#0080FF");
+        a.log(msg,);
     } else {
         a.log(msg.replace(/%c/g,''));
     }
