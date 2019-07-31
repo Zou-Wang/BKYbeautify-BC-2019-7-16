@@ -135,7 +135,7 @@ a:hover {
 #header #navigator {
     height: inherit;
     position: relative;
-    top: -365px;
+    top: -385px;
     background-color: transparent;
     display: inline-block;
     z-index: 999;
@@ -464,6 +464,7 @@ a:hover {
 
 .post .postBody h2 {
     font-size: 20px!important;
+    font-weight: 100!important;
     color: #61687C
 }
 
@@ -715,12 +716,12 @@ a:hover {
     margin-right: 0
 }
 
-#homepage1_HomePageDays_homepage_bottom_pager .pager {
-    display: inline-block;
-    font-size: 12px;
+#homepage1_HomePageDays_homepage_bottom_pager .pager,#comments_pager_bottom .pager {
+    display: inline-block; 
+    font-size: 12px !important;
     font-weight: 0;
     color: #61687C;
-    background-color:transparent;
+    background-color:transparent !important;
     border-radius: 6px;
 }
 
@@ -746,15 +747,15 @@ a:hover {
 }
 
 .pager span.current {
+    color: #F58EA8;
     padding: 3px 7px;
     border: 1px solid #F58EA8;
     border-radius: 4px;
     font-family: Monospaced Number;
     margin: 0 3px;
     text-decoration: none;
-    background-color: #F58EA8
+    background-color: transparent;
 }
-
 .esa-clipboard-button {
     font-size: 12px;
     cursor: pointer;
