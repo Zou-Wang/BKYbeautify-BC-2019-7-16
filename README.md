@@ -5,7 +5,8 @@
 本博客采用的模板是`Custom`，所有样式都是基于这上面，所以一定先把模板改成这个。
 <br/>
 **预览效果：**
-[博客园](https://www.cnblogs.com/zouwangblog/)
+<img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190813174520975-974189988.png"/>
+<img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190813174528803-423737387.png"/>
 <br/>
 **作者：**
 [Zou-Wang](https://www.cnblogs.com/zouwangblog/)
